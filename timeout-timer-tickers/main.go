@@ -46,9 +46,9 @@ func main() {
 	// }
 
 	/** Timer 1 **/
-	// 	timer1 := time.NewTimer(2 * time.Second)
-	// 	<-timer1.C
-	// 	fmt.Println("Timer 1 end!")
+	// timer1 := time.NewTimer(2 * time.Second)
+	// <-timer1.C
+	// fmt.Println("Timer 1 end!")
 
 	/** Timer 2 **/
 	// 	chan1 := make(chan string)
@@ -76,8 +76,7 @@ func main() {
 	// 	<-timer3.C
 	// 	fmt.Println("Timer 3 end!")
 	// }()
-
-	// stopped := timer3.Stop()
+	// stopped := timer3.Stop() // Immidiately stop timer after call go routine
 	// if stopped {
 	// 	fmt.Println("Timer 3 stopped!")
 	// }
