@@ -19,6 +19,9 @@ func main() {
 	fmt.Printf("%v\n", n)
 	n = 200
 	fmt.Printf("%v\n", n)
+	fmt.Print("Enter number: ")
+	fmt.Scanln(&n)
+	fmt.Printf("Your input: %v\n", n)
 	s := cnst
 	fmt.Println("s:", s)
 
