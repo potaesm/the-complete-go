@@ -11,10 +11,22 @@ type contact struct {
 	postCode int
 }
 
+var globalVariable string
+
+const (
+	simpleGlobalConstant  = "Suthinan Musitmani"
+	anotherGlobalConstant = "Potaesm"
+)
+
 func main() {
 	/** Simple variables **/
-	const cnst = "Suthinan Musitmani"
-	fmt.Println(cnst)
+	fmt.Println("globalVariable:", globalVariable)
+	globalVariable = "Musitmani"
+	fmt.Println("globalVariable:", globalVariable)
+	fmt.Println("simpleGlobalConstant:", simpleGlobalConstant)
+	fmt.Println("anotherGlobalConstant:", anotherGlobalConstant)
+	const localConstant = "Suthinan Musitmani"
+	fmt.Println(localConstant)
 	var n int = 100
 	fmt.Printf("%v\n", n)
 	n = 200
@@ -22,7 +34,7 @@ func main() {
 	fmt.Print("Enter number: ")
 	fmt.Scanln(&n)
 	fmt.Printf("Your input: %v\n", n)
-	s := cnst
+	s := localConstant
 	fmt.Println("s:", s)
 
 	/** Variable with struct and slice **/

@@ -9,9 +9,9 @@ import (
 )
 
 func main() {
-	fmt.Println(numbers.IsPrime(20))
-	fmt.Println(strings.Reverse("demha"))
-	fmt.Println(greeting.Welcome)
-	fmt.Println(greeting.MorningText)
-	fmt.Println(greeting.EveningText)
+	fmt.Println("numbers.IsPrime(7):", numbers.IsPrime(7))
+	fmt.Println("strings.Reverse(\"Suthinan\"):", strings.Reverse("Suthinan"))
+	fmt.Println("greeting.Welcome:", greeting.Welcome)
+	fmt.Println("greeting.MorningText:", greeting.MorningText)
+	fmt.Println("greeting.EveningText:", greeting.EveningText)
 }
