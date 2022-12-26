@@ -62,6 +62,24 @@ func main() {
 	// 		}
 	// 	}
 
+	// 	c4 := make(chan string)
+	// 	c5 := make(chan string)
+	// 	go sendMessage(c4, "Golang channel 4")
+	// 	go sendMessage(c5, "Golang channel 5")
+	// breakpoint:
+	// 	for {
+	// 		select {
+	// 		case msg4 := <-c4:
+	// 			fmt.Println("received", msg4)
+	// 			break
+	// 		case msg5 := <-c5:
+	// 			fmt.Println("received", msg5)
+	// 			break
+	// 		case <-time.After(3 * time.Second):
+	// 			break breakpoint
+	// 		}
+	// 	}
+
 	/** Play Ping-Pong Using Wait Group **/
 	var wg sync.WaitGroup
 	pingCh := make(chan bool)
