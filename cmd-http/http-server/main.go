@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"io/ioutil"
 	"net/http"
+	"os"
 	"strconv"
 )
 
@@ -23,9 +24,13 @@ var Users = []User{
 func main() {
 	http.HandleFunc("/users", handleUsers)
 	http.HandleFunc("/", handleIndex)
-	port := 8090
+	const port = 8080
 	fmt.Println("Starting http server at port", port)
-	http.ListenAndServe(":"+strconv.Itoa(port), nil)
+	err := http.ListenAndServe(":"+strconv.Itoa(port), nil)
+	if err != nil {
+		fmt.Println("Error:", err.Error())
+		os.Exit(1)
+	}
 }
 
 func handleIndex(w http.ResponseWriter, req *http.Request) {
