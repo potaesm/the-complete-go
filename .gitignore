@@ -1,2 +1,4 @@
 .DS_Store
 */.DS_Store
+*/lines-*.txt
+*/struct-*.json
